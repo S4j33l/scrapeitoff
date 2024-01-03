@@ -12,11 +12,15 @@ def systemicActions():
         By.XPATH, "/html/body/div/div[1]/div[2]/p/a")
     login_button.click()
     time.sleep(2)
-    username_text_field = driver.find_element(By.XPATH, '//*[@id="username"]')
-    print(username_text_field.is_displayed())
+    username_text_field = driver.find_element(By.ID, "username")
     username_text_field.send_keys("s4j337")
-    password_text_field = driver.find_element(By.XPATH, '//*[@id="password"]')
+    password_text_field = driver.find_element(By.ID, "password")
     password_text_field.send_keys("admin")
+    time.sleep(2)
+    Login_button_2 = driver.find_element(
+        By.XPATH, "/html/body/div/form/input[2]")
+    Login_button_2.click()
+    time.sleep(2)
 
 
 systemicActions()
