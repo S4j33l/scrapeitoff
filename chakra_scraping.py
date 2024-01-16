@@ -13,4 +13,7 @@ with open("chakra_elements.txt", "w") as chakra_elements_file:
             if len(split_text) > 1:
                 chakra_elements_file.write(split_text[1].strip() + "\n")
             else:
-                chakra_elements_file.write(split_text[0] + "\n")
+                if (web_element.text.startswith("_hover")):
+                    break
+                else:
+                    chakra_elements_file.write(split_text[0] + "\n")
